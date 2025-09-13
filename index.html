@@ -3,22 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Кодекс Красоты</title>
+    <title>Кодекс Красоты (для Алёнки) </title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             --primary: #bb86fc;
-            --primary-variant: #a66afc;
+            --primary-variant: #d9b8ff;
             --secondary: #03dac6;
-            --background: #121212;
-            --surface: #1e1e1e;
+            --background: #1a1a1a;
+            --surface: #252525;
             --error: #cf6679;
             --on-primary: #000000;
             --on-secondary: #000000;
             --on-background: #ffffff;
             --on-surface: #ffffff;
             --on-error: #000000;
+            --accent: #ff2a6d;
         }
         
         body {
@@ -26,17 +27,19 @@
             color: var(--on-background);
             min-height: 100vh;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
         }
         
         .navbar {
-            background-color: var(--surface);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            background: linear-gradient(135deg, #2c003e, #4a235a);
+            box-shadow: 0 4px 20px rgba(187, 134, 252, 0.3);
         }
         
         .hero {
-            background: linear-gradient(to right, #2c3e50, #4a235a);
+            background: linear-gradient(to right, #2c003e, #4a235a, #6a3093);
             position: relative;
             overflow: hidden;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
         
         .hero::before {
@@ -52,20 +55,23 @@
         }
         
         .card {
-            background-color: var(--surface);
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(145deg, #2d2d2d, #252525);
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             height: 100%;
+            border: 1px solid rgba(187, 134, 252, 0.2);
         }
         
         .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(187, 134, 252, 0.25);
         }
         
         .card-header {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(187, 134, 252, 0.3);
+            background: linear-gradient(90deg, rgba(187, 134, 252, 0.15), rgba(3, 218, 198, 0.15));
+            padding: 1rem 1.5rem;
         }
         
         .section {
@@ -73,33 +79,44 @@
         }
         
         .law-article {
-            border-left: 4px solid var(--primary);
-            padding-left: 1.5rem;
-            margin-bottom: 2rem;
+            border-left: 5px solid var(--primary);
+            padding-left: 2rem;
+            margin-bottom: 3rem;
+            background: rgba(30, 30, 30, 0.7);
+            padding: 1.5rem 2rem;
+            border-radius: 0 12px 12px 0;
         }
         
         .law-point {
             margin-left: 1rem;
-            padding: 0.5rem 0;
+            padding: 0.8rem 0;
             position: relative;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+        }
+        
+        .law-point:last-child {
+            border-bottom: none;
         }
         
         .law-point::before {
-            content: '•';
-            color: var(--secondary);
+            content: '✦';
+            color: var(--accent);
             font-weight: bold;
             display: inline-block;
-            width: 1em;
-            margin-left: -1em;
+            width: 1.5em;
+            margin-left: -1.5em;
+            font-size: 1.2em;
         }
         
         .glow-text {
-            text-shadow: 0 0 10px rgba(187, 134, 252, 0.5);
+            text-shadow: 0 0 15px rgba(187, 134, 252, 0.8);
+            color: #fff;
         }
         
         .footer {
-            background-color: var(--surface);
+            background: linear-gradient(135deg, #2c003e, #4a235a);
             padding: 3rem 1.5rem;
+            box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.3);
         }
         
         .heartbeat {
@@ -136,8 +153,75 @@
         
         @keyframes floating {
             0% { transform: translate(0, 0px); }
-            50% { transform: translate(0, 10px); }
+            50% { transform: translate(0, 15px); }
             100% { transform: translate(0, -0px); }
+        }
+        
+        .title, .subtitle {
+            color: #fff !important;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+        
+        .notification {
+            background: linear-gradient(135deg, rgba(187, 134, 252, 0.25), rgba(3, 218, 198, 0.25));
+            border: 1px solid rgba(187, 134, 252, 0.3);
+            color: #fff;
+            border-radius: 12px;
+        }
+        
+        .navbar-item {
+            color: #fff !important;
+            font-weight: 500;
+        }
+        
+        .navbar-item:hover {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            color: var(--primary) !important;
+        }
+        
+        .content h1, .content h2, .content h3, .content h4 {
+            color: #fff;
+        }
+        
+        strong {
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        .icon {
+            color: var(--primary);
+        }
+        
+        .law-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-right: 0.5rem;
+            text-shadow: 0 0 10px rgba(187, 134, 252, 0.5);
+        }
+        
+        .shine {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .shine::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%);
+            transform: rotate(30deg);
+            animation: shine 5s infinite;
+            opacity: 0;
+        }
+        
+        @keyframes shine {
+            0% { opacity: 0; left: -50%; }
+            10% { opacity: 0.5; }
+            100% { opacity: 0; left: 100%; }
         }
     </style>
 </head>
@@ -146,8 +230,8 @@
         <div class="container">
             <div class="navbar-brand">
                 <a class="navbar-item" href="#">
-                    <i class="fas fa-balance-scale-left mr-2"></i>
-                    <strong>Кодекс Красоты</strong>
+                    <i class="fas fa-crown mr-2"></i>
+                    <strong>Кодекс Красоты (специально для Алёны) </strong>
                 </a>
             </div>
             
@@ -178,7 +262,7 @@
                 </p>
                 <div class="floating">
                     <span class="icon is-large heartbeat">
-                        <i class="fas fa-heart fa-2x" style="color: #ff2a6d;"></i>
+                        <i class="fas fa-heart fa-3x" style="color: #ff2a6d;"></i>
                     </span>
                 </div>
             </div>
@@ -190,10 +274,18 @@
             <div class="columns is-centered">
                 <div class="column is-10">
                     <div class="card">
+                        <header class="card-header">
+                            <p class="card-header-title is-size-3 has-text-primary">
+                                Официальный свод законов
+                            </p>
+                            <span class="icon is-large mr-3 mt-2">
+                                <i class="fas fa-scroll fa-2x"></i>
+                            </span>
+                        </header>
                         <div class="card-content">
                             <div class="content">
-                                <div class="law-article">
-                                    <h2 class="title is-3">Статья 1</h2>
+                                <div class="law-article shine">
+                                    <h2 class="title is-3"><span class="law-number">1</span>Статья 1</h2>
                                     <h3 class="subtitle is-5">О праве на вечную жизнь и красоту</h3>
                                     
                                     <div class="law-point">
@@ -209,8 +301,8 @@
                                     </div>
                                 </div>
                                 
-                                <div class="law-article">
-                                    <h2 class="title is-3">Статья 2</h2>
+                                <div class="law-article shine">
+                                    <h2 class="title is-3"><span class="law-number">2</span>Статья 2</h2>
                                     <h3 class="subtitle is-5">О праве на восхищение и комплименты</h3>
                                     
                                     <div class="law-point">
@@ -226,8 +318,8 @@
                                     </div>
                                 </div>
                                 
-                                <div class="law-article">
-                                    <h2 class="title is-3">Статья 3</h2>
+                                <div class="law-article shine">
+                                    <h2 class="title is-3"><span class="law-number">3</span>Статья 3</h2>
                                     <h3 class="subtitle is-5">О праве на счастье и хорошее настроение</h3>
                                     
                                     <div class="law-point">
@@ -243,8 +335,8 @@
                                     </div>
                                 </div>
                                 
-                                <div class="law-article">
-                                    <h2 class="title is-3">Статья 4</h2>
+                                <div class="law-article shine">
+                                    <h2 class="title is-3"><span class="law-number">4</span>Статья 4</h2>
                                     <h3 class="subtitle is-5">О защите от негатива и проблем</h3>
                                     
                                     <div class="law-point">
@@ -256,7 +348,7 @@
                                     </div>
                                     
                                     <div class="law-point">
-                                        Пункт 4.3: Все проблемы должны решаться до того, как они смогут повлиять на настроение и самочувствие.
+                                        Pункт 4.3: Все проблемы должны решаться до того, как они смогут повлиять на настроение и самочувствие.
                                     </div>
                                 </div>
                             </div>
@@ -271,7 +363,7 @@
         <div class="container has-text-centered">
             <div class="columns is-centered">
                 <div class="column is-8">
-                    <div class="notification is-primary" style="background-color: var(--primary-variant);">
+                    <div class="notification is-primary">
                         <div class="content">
                             <p class="title is-4">Важное примечание:</p>
                             <p>Данный кодекс является вечным и нерушимым. Все его положения подлежат безусловному исполнению. Нарушители будут привлечены к ответственности в виде обязанности сделать жизнь красивой девушки еще прекраснее.</p>
