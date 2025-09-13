@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кодекс Красоты</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #bb86fc;
+            --primary-variant: #a66afc;
+            --secondary: #03dac6;
+            --background: #121212;
+            --surface: #1e1e1e;
+            --error: #cf6679;
+            --on-primary: #000000;
+            --on-secondary: #000000;
+            --on-background: #ffffff;
+            --on-surface: #ffffff;
+            --on-error: #000000;
+        }
+        
+        body {
+            background-color: var(--background);
+            color: var(--on-background);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .navbar {
+            background-color: var(--surface);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero {
+            background: linear-gradient(to right, #2c3e50, #4a235a);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" opacity="0.05"><circle cx="50" cy="50" r="40" fill="white"/></svg>');
+            background-size: 200px;
+            opacity: 0.1;
+        }
+        
+        .card {
+            background-color: var(--surface);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+        }
+        
+        .card-header {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .section {
+            padding: 3rem 1.5rem;
+        }
+        
+        .law-article {
+            border-left: 4px solid var(--primary);
+            padding-left: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .law-point {
+            margin-left: 1rem;
+            padding: 0.5rem 0;
+            position: relative;
+        }
+        
+        .law-point::before {
+            content: '•';
+            color: var(--secondary);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        
+        .glow-text {
+            text-shadow: 0 0 10px rgba(187, 134, 252, 0.5);
+        }
+        
+        .footer {
+            background-color: var(--surface);
+            padding: 3rem 1.5rem;
+        }
+        
+        .heartbeat {
+            animation: heartbeat 1.5s ease-in-out infinite both;
+        }
+        
+        @keyframes heartbeat {
+            from {
+                transform: scale(1);
+                transform-origin: center center;
+                animation-timing-function: ease-out;
+            }
+            10% {
+                transform: scale(0.91);
+                animation-timing-function: ease-in;
+            }
+            17% {
+                transform: scale(0.98);
+                animation-timing-function: ease-out;
+            }
+            33% {
+                transform: scale(0.87);
+                animation-timing-function: ease-in;
+            }
+            45% {
+                transform: scale(1);
+                animation-timing-function: ease-out;
+            }
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translate(0, 0px); }
+            50% { transform: translate(0, 10px); }
+            100% { transform: translate(0, -0px); }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="#">
+                    <i class="fas fa-balance-scale-left mr-2"></i>
+                    <strong>Кодекс Красоты</strong>
+                </a>
+            </div>
+            
+            <div class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item" href="#main">
+                        Главная
+                    </a>
+                    <a class="navbar-item" href="#laws">
+                        Статьи
+                    </a>
+                    <a class="navbar-item" href="#footer">
+                        Контакты
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <section class="hero is-medium" id="main">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <p class="title is-1 glow-text">
+                    Кодекс Красоты
+                </p>
+                <p class="subtitle is-4">
+                    Свод законов о прекрасных девушках и их неотъемлемых правах
+                </p>
+                <div class="floating">
+                    <span class="icon is-large heartbeat">
+                        <i class="fas fa-heart fa-2x" style="color: #ff2a6d;"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section" id="laws">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-10">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="content">
+                                <div class="law-article">
+                                    <h2 class="title is-3">Статья 1</h2>
+                                    <h3 class="subtitle is-5">О праве на вечную жизнь и красоту</h3>
+                                    
+                                    <div class="law-point">
+                                        Пункт 1.1: Каждая красивая девушка имеет неотъемлемое право на вечную жизнь, молодость и красоту.
+                                    </div>
+                                    
+                                    <div class="law-point">
+                                        Пункт 1.2: Запрещается умышленно или по неосторожности причинять вред своей красоте и здоровью.
+                                    </div>
+                                    
+                                    <div class="law-point">
+                                        Пункт 1.3: Обязанностью окружающих является создание условий для сохранения и приумножения красоты.
+                                    </div>
+                                </div>
+                                
+                                <div class="law-article">
+                                    <h2 class="title is-3">Статья 2</h2>
+                                    <h3 class="subtitle is-5">О праве на восхищение и комплименты</h3>
+                                    
+                                    <div class="law-point">
+                                        Пункт 2.1: Каждая красивая девушка имеет право на искреннее восхищение и регулярные комплименты.
+                                    </div>
+                                    
+                                    <div class="law-point">
+                                        Пункт 2.2: Запрещается скупиться на добрые слова и проявления восхищения.
+                                    </div>
+                                    
+                                    <div class="law-point">
+                                        Пункт 2.3: Комплименты должны быть оригинальными, искренними и доставлять удовольствие.
+                                    </div>
+                                </div>
+                                
+                                <div class="law-article">
+                                    <h2 class="title is-3">Статья 3</h2>
+                                    <h3 class="subtitle is-5">О праве на счастье и хорошее настроение</h3>
+                                    
+                                    <div class="law-point">
+                                        Пункт 3.1: Красивые девушки обязаны быть счастливыми и дарить радость окружающим.
+                                    </div>
+                                    
+                                    <div class="law-point">
+                                        Пункт 3.2: Запрещается портить настроение красивым девушкам, а также быть причиной их грусти.
+                                    </div>
+                                    
+                                    <div class="law-point">
+                                        Пункт 3.3: В случае обнаружения грусти или плохого настроения, необходимо немедленно принять меры по их устранению.
+                                    </div>
+                                </div>
+                                
+                                <div class="law-article">
+                                    <h2 class="title is-3">Статья 4</h2>
+                                    <h3 class="subtitle is-5">О защите от негатива и проблем</h3>
+                                    
+                                    <div class="law-point">
+                                        Пункт 4.1: Красивые девушки имеют право на полную защиту от любых проблем и негативных воздействий.
+                                    </div>
+                                    
+                                    <div class="law-point">
+                                        Пункт 4.2: Запрещается допускать, чтобы красивые девушки сталкивались с трудностями и неприятностями.
+                                    </div>
+                                    
+                                    <div class="law-point">
+                                        Пункт 4.3: Все проблемы должны решаться до того, как они смогут повлиять на настроение и самочувствие.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section">
+        <div class="container has-text-centered">
+            <div class="columns is-centered">
+                <div class="column is-8">
+                    <div class="notification is-primary" style="background-color: var(--primary-variant);">
+                        <div class="content">
+                            <p class="title is-4">Важное примечание:</p>
+                            <p>Данный кодекс является вечным и нерушимым. Все его положения подлежат безусловному исполнению. Нарушители будут привлечены к ответственности в виде обязанности сделать жизнь красивой девушки еще прекраснее.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <span class="icon is-large">
+                            <i class="fas fa-star fa-2x" style="color: var(--secondary);"></i>
+                        </span>
+                        <span class="icon is-large mx-4">
+                            <i class="fas fa-crown fa-2x" style="color: gold;"></i>
+                        </span>
+                        <span class="icon is-large">
+                            <i class="fas fa-gem fa-2x" style="color: var(--primary);"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer" id="footer">
+        <div class="content has-text-centered">
+            <p>
+                <strong>Кодекс Красоты</strong> · Все права защищены
+            </p>
+            <p class="mt-3">
+                <span class="icon-text">
+                    <span class="icon">
+                        <i class="fas fa-heart"></i>
+                    </span>
+                    <span>Создано с любовью для самой прекрасной девушки</span>
+                </span>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
